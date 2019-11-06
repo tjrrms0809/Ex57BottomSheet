@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="bottom dialog"
+        android:textAllCaps="false"
+        android:onClick="clickBtn"
+        android:layout_margin="16dp"/>
+
+<!--  아래쪽에 숨어있고 드레그해서  -->
+<!--  보이게 하는 뷰의 레이아웃  -->
+
+    <LinearLayout
+        app:behavior_peekHeight="35dp"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#BBBBBB">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bottom sheet"
+            android:textStyle="bold"
+            android:textColor="#99000000"
+            android:textSize="10sp"
+            android:layout_marginBottom="8dp"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@drawable/bg_one04" />
+
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
